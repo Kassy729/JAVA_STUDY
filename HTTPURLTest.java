@@ -19,7 +19,7 @@ public class HTTPURLTest {
       //?????
       con.setRequestProperty("User-Agent", "Mozilla/5.0");
       
-      //?????
+      //에러 코드를 받아온다
       int code = con.getResponseCode();
       System.out.println("Response code:" + code);
       

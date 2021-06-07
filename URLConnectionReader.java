@@ -18,7 +18,7 @@ public class URLConnectionReader {
       // 4. 얻은 스트림을 읽어서 streamReader 변수에 저장한다.
       InputStreamReader streamReader = new InputStreamReader(stream);
       
-      // 5. ????
+      // 5. streamReader로 감싸준다
       BufferedReader reader = new BufferedReader(streamReader);
       String line;
       while((line = reader.readLine()) != null) {
