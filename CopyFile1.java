@@ -12,11 +12,19 @@ public class CopyFile1 {
 		FileOutputStream out = null;  //파일에서바이트를 쓴다.
 		
 		try {
+<<<<<<< HEAD
 			in = new FileInputStream("input.txt");  //파일을 입력한
 			out = new FileOutputStream("output.txt");  //파일을 출력한다
 			int c;
 			
 			while ((c = in.read()) != -1) {  // -1될때까지 읽는다
+=======
+			in = new FileInputStream("input.txt");
+			out = new FileOutputStream("output.txt");
+			int c;
+			
+			while ((c = in.read()) != -1) {
+>>>>>>> 78044c48689e8f27e3111d5a16fce9a00585af5c
 				out.write(c);
 			}
 			System.out.println(c);
@@ -25,7 +33,10 @@ public class CopyFile1 {
 				in.close();
 			if(out != null)
 				out.close();
+<<<<<<< HEAD
 			
+=======
+>>>>>>> 78044c48689e8f27e3111d5a16fce9a00585af5c
 		}
 	}
 
