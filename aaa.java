@@ -10,8 +10,6 @@ import java.util.Scanner;
 
 public class aaa {
 	public static void main(String[] args) {
-		String site = "http://localhost:9090/todes";
 		
-		URL url = new URL
 	}
 }

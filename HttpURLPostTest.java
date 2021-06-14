@@ -6,7 +6,7 @@ import java.io.*;
 public class HttpURLPostTest {
     public static void main(String[] args) throws Exception
     {
-        String site = "http://localhost:9090/todos";
+        String site = "http://localhost:9100/todos";
 
         URL url=new URL(site);
 
@@ -17,6 +17,7 @@ public class HttpURLPostTest {
         //?????
         con.setDoOutput(true);
         //?????
+        con.setRequestMethod("POST");
         con.setRequestProperty("content-type", "application/x-www-form-urlencoded");
 
         String data = "id=scpark&pw=1111";
@@ -31,6 +32,7 @@ public class HttpURLPostTest {
 
         PrintWriter writer = new PrintWriter(oWriter);
         writer.println(data);   // 메모리상에 쌓임. 바로 갈 때도 있지만 안 갈 때도 있음
+        						//PrintWriter와 println을 사용해 서버로 데이터를 전송
         writer.flush(); // 혹시 안 갔을 수도 있으니 메모리 상에 있는 걸 바로 보내는 메소드
 
         BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));

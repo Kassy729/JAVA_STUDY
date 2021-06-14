@@ -37,6 +37,7 @@ class NewSocket extends Thread{
 			PrintWriter writer = new PrintWriter(ostream, true);  //효율적으로 보낸다.
 			writer.println(Calendar.getInstance().getTime());  //클라이언트에게 괄호안의 값을 보내준다
 			Thread.sleep(1000*10);
+			writer.println();
 			socket.close();
 			System.out.println("클라이언트와의 연결을 종료합니다.");
 		} catch (Exception e) {
